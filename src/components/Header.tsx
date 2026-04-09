@@ -22,20 +22,20 @@ export default function Header() {
         Frete grátis acima de R$ 299 &nbsp;·&nbsp; Atacado mínimo 10 peças
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2 text-text-muted hover:text-primary transition-colors"
+            className="lg:hidden p-2 text-text-muted hover:text-primary transition-colors flex-shrink-0"
             onClick={() => setMobileOpen((o) => !o)}
             aria-label="Menu"
           >
             {mobileOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
 
-          {/* Logo */}
-          <Link to="/" className="flex-shrink-0">
-            <Logo className="h-20 w-auto" />
+          {/* Logo — centralizada no mobile */}
+          <Link to="/" className="flex-1 flex justify-center lg:justify-start lg:flex-none">
+            <Logo className="h-14 sm:h-16 lg:h-20 w-auto" />
           </Link>
 
           {/* Nav — desktop */}
@@ -58,7 +58,7 @@ export default function Header() {
           {/* Cart button */}
           <button
             onClick={openDrawer}
-            className="relative p-2 text-text-muted hover:text-primary transition-colors"
+            className="relative p-2 text-text-muted hover:text-primary transition-colors flex-shrink-0"
             aria-label="Carrinho"
           >
             <ShoppingBag size={22} />
