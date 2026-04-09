@@ -14,7 +14,7 @@ export default function Logo({ className = '', variant = 'dark' }: LogoProps) {
 
   return (
     <img
-      src="./logo/logo-dona-boutique.png"
+      src="/dona-da-boutique/logo/logo-dona-boutique.png"
       alt="Dona da Boutique"
       className={className}
       style={style}
